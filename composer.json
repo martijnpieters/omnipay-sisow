@@ -14,11 +14,11 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "nettob",
+            "name": "nettob"
         }
     ],
     "autoload": {
-        "psr-0": { "Omnipay\\Sisow\\" : "src/" }
+        "psr-0": { "nettob\\Sisow\\" : "src/" }
     },
     "require": {
         "omnipay/common": "~2.0"
