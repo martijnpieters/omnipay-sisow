@@ -18,10 +18,11 @@ class Gateway extends AbstractGateway
 
     public function getDefaultParameters()
     {
-        $parameters['shopid'] = '';
-        $parameters['merchantid'] = '';
-        $parameters['testmode'] = false;
-        return $parameters;
+		return array(
+			'shopid' => '',
+			'merchantid' => '',
+		    'testMode' => false
+		);
     }
 
     public function getMerchantKey()
