@@ -8,7 +8,8 @@
         "sisow",
         "omnipay",
         "pay",
-        "payment"
+        "payment",
+		"ideal"
     ],
     "homepage": "https://github.com/nettob/omnipay-sisow",
     "license": "MIT",
