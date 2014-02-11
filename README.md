@@ -2,9 +2,9 @@
 
 **Sisow driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/omnipay/siow.png?branch=master)](https://travis-ci.org/omnipay/sisow)
-[![Latest Stable Version](https://poser.pugx.org/omnipay/mollie/version.png)](https://packagist.org/packages/omnipay/sisow)
-[![Total Downloads](https://poser.pugx.org/omnipay/mollie/d/total.png)](https://packagist.org/packages/omnipay/sisow)
+[![Build Status](https://travis-ci.org/nettob/omnipay-sisow.png?branch=master)](https://travis-ci.org/nettob/omnipay-sisow)
+[![Latest Stable Version](https://poser.pugx.org/nettob/omnipay-sisow/version.png)](https://packagist.org/packages/nettob/omnipay-sisow)
+[![Total Downloads](https://poser.pugx.org/nettob/omnipay-sisow/d/total.png)](https://packagist.org/packages/nettob/omnipay-sisow)
 
 [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+. This package implements Sisow support for Omnipay.
@@ -17,7 +17,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "omnipay/sisow": "~2.0"
+        "nettob/omnipay-sisow": "~2.0"
     }
 }
 ```
