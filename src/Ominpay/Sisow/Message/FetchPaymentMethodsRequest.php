@@ -11,8 +11,8 @@ class FetchPaymentMethodsRequest extends AbstractRequest
     protected function generateSignature()
     {
         return sha1(
-                $this->getMerchantId() .
-                $this->getMerchantKey()
+            $this->getMerchantId() .
+            $this->getMerchantKey()
         );
     }
 
@@ -29,5 +29,4 @@ class FetchPaymentMethodsRequest extends AbstractRequest
 
         return $data;
     }
-
 }
