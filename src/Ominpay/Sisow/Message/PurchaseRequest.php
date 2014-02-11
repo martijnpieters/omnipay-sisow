@@ -87,5 +87,4 @@ class PurchaseRequest extends AbstractRequest
         $data['sha1'] = $this->generateSignature();
         return $data;
     }
-
 }
