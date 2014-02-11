@@ -50,11 +50,11 @@ class PurchaseRequest extends AbstractRequest
 
     protected function generateSignature()
     {
-        return sha1(
-			$this->getTransactionId() .
-			$this->getEntranceCode() .
-			$this->getAmountInteger() .
-			$this->getMerchantId() .
+		return sha1(
+			$this->getTransactionId().
+			$this->getEntranceCode().
+			$this->getAmountInteger().
+			$this->getMerchantId().
 			$this->getMerchantKey()
         );
     }
