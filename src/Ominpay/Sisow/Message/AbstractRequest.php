@@ -82,5 +82,4 @@ abstract class AbstractRequest extends BaseAbstractRequest
     {
         return $this->response = new Response($this, $data);
     }
-
 }

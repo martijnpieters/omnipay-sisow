@@ -114,5 +114,4 @@ class Response extends AbstractResponse implements RedirectResponseInterface
             return $payments;
         }
     }
-
 }

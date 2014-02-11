@@ -14,5 +14,4 @@ class FetchIssuersRequest extends AbstractRequest
         $data = $this->getBaseData();
         return $data;
     }
-
 }

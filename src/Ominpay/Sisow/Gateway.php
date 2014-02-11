@@ -65,5 +65,4 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\Sisow\Message\CompletePurchaseRequest', $parameters);
     }
-
 }
