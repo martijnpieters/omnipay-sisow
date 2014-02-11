@@ -11,6 +11,7 @@ use Omnipay\Common\AbstractGateway;
  */
 class Gateway extends AbstractGateway
 {
+
     public function getName()
     {
         return 'Sisow';
@@ -18,11 +19,11 @@ class Gateway extends AbstractGateway
 
     public function getDefaultParameters()
     {
-		return array(
-			'shopid' => '',
-			'merchantid' => '',
-		    'testMode' => false
-		);
+        return array(
+            'shopid' => '',
+            'merchantid' => '',
+            'testmode' => false
+        );
     }
 
     public function getMerchantKey()
@@ -44,10 +45,12 @@ class Gateway extends AbstractGateway
     {
         return $this->setParameter('merchantid', $value);
     }
+
     public function fetchPaymentMethods(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Sisow\Message\FetchPaymentMethodsRequest', $parameters);
     }
+
     public function fetchIssuers(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Sisow\Message\FetchIssuersRequest', $parameters);
@@ -62,4 +65,5 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\Sisow\Message\CompletePurchaseRequest', $parameters);
     }
+
 }

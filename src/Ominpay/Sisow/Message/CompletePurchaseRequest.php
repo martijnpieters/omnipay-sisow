@@ -3,20 +3,22 @@
 namespace Omnipay\Sisow\Message;
 
 class CompletePurchaseRequest extends PurchaseRequest
-{    
-	 protected function generateSignature(){
-	    return sha1(
-	    	$this->getTransactionId().
-	    	$this->getMerchantId().
-	    	$this->getMerchantKey()
-	    );
+{
+
+    protected function generateSignature()
+    {
+        return sha1(
+                $this->getTransactionId() .
+                $this->getMerchantId() .
+                $this->getMerchantKey()
+        );
     }
 
     public function getData()
     {
-        $this->validate('merchantid', 'merchantkey', 'amount', 'transactionId', 'returnUrl', 'notifyUrl', 'entrancecode');
+        $this->validate('merchantid', 'merchantkey', 'transactionId', 'entrancecode');
 
-	    $this->setType('StatusRequest');
+        $this->setType('StatusRequest');
 
         $data['merchantid'] = $this->getMerchantId();
         $data['merchantkey'] = $this->getMerchantKey();

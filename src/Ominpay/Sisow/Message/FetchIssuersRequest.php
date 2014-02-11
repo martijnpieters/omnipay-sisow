@@ -7,10 +7,12 @@ namespace Omnipay\Sisow\Message;
  */
 class FetchIssuersRequest extends AbstractRequest
 {
+
     public function getData()
     {
-	    $this->setType('DirectoryRequest');
+        $this->setType('DirectoryRequest');
         $data = $this->getBaseData();
         return $data;
     }
+
 }

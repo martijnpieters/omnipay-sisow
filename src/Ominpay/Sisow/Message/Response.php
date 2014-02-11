@@ -10,25 +10,26 @@ use Omnipay\Common\Message\RedirectResponseInterface;
  */
 class Response extends AbstractResponse implements RedirectResponseInterface
 {
+
     public function isSuccessful()
-    {	
+    {
         if ($this->isRedirect()) {
             return false;
         }
 
         if (isset($this->data->transaction)) {
-	        if($this->data->transaction->issuerurl){
-		        return true;
-		    }elseif((string)$this->data->transaction->status == 'Success'){
-			    return true;
-		    }
+            if ($this->data->transaction->issuerurl) {
+                return true;
+            } elseif ((string) $this->data->transaction->status == 'Success') {
+                return true;
+            }
         } elseif (isset($this->data->directory)) {
-	        return true;
-	    } elseif (isset($this->data->merchant)) {
-		    if((string)$this->data->merchant->active == 'true'){
-		        return true;
-		    }
-	    }
+            return true;
+        } elseif (isset($this->data->merchant)) {
+            if ((string) $this->data->merchant->active == 'true') {
+                return true;
+            }
+        }
 
         return false;
     }
@@ -67,8 +68,8 @@ class Response extends AbstractResponse implements RedirectResponseInterface
     {
         if (isset($this->data->error)) {
             return (string) $this->data->error->errormessage;
-        }elseif(isset($this->data->transaction->status)){
-	        return (string) $this->data->transaction->status;
+        } elseif (isset($this->data->transaction->status)) {
+            return (string) $this->data->transaction->status;
         }
     }
 
@@ -96,6 +97,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
             return $issuers;
         }
     }
+
     /**
      * Get an associateive array of payment methods returned from a fetchPaymentMethods request
      */
@@ -106,10 +108,11 @@ class Response extends AbstractResponse implements RedirectResponseInterface
 
             foreach ($this->data->merchant->payments->payment as $payment) {
                 $paymentname = (string) $payment;
-                $payments[] = $paymentname;
+                $payments[$paymentname] = $paymentname;
             }
 
             return $payments;
         }
     }
+
 }
