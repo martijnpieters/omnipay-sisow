@@ -7,10 +7,10 @@ class CompletePurchaseRequest extends PurchaseRequest
 
     protected function generateSignature()
     {
-		return sha1(
-			$this->getTransactionId().
-			$this->getMerchantId().
-			$this->getMerchantKey()
+        return sha1(
+                $this->getTransactionId() .
+                $this->getMerchantId() .
+                $this->getMerchantKey()
         );
     }
 
@@ -27,4 +27,5 @@ class CompletePurchaseRequest extends PurchaseRequest
         $data['sha1'] = $this->generateSignature();
         return $data;
     }
+
 }

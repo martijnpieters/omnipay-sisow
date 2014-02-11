@@ -50,26 +50,20 @@ class PurchaseRequest extends AbstractRequest
 
     protected function generateSignature()
     {
-		return sha1(
-			$this->getTransactionId().
-			$this->getEntranceCode().
-			$this->getAmountInteger().
-			$this->getMerchantId().
-			$this->getMerchantKey()
+        return sha1(
+                $this->getTransactionId() .
+                $this->getEntranceCode() .
+                $this->getAmountInteger() .
+                $this->getMerchantId() .
+                $this->getMerchantKey()
         );
     }
 
     public function getData()
     {
         $this->validate(
-			'merchantid',
-			'merchantkey',
-			'amount',
-			'transactionId',
-			'returnUrl',
-			'notifyUrl',
-			'entrancecode'
-		);
+                'merchantid', 'merchantkey', 'amount', 'transactionId', 'returnUrl', 'notifyUrl', 'entrancecode'
+        );
 
         $this->setType('TransactionRequest');
 
@@ -90,4 +84,5 @@ class PurchaseRequest extends AbstractRequest
         $data['sha1'] = $this->generateSignature();
         return $data;
     }
+
 }
