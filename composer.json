@@ -1,5 +1,5 @@
 {
-    "name": "nettob/omnipay-sisow",
+    "name": "martijnpieters/omnipay-sisow",
     "type": "library",
     "description": "Sisow driver for the Omnipay payment processing library",
     "keywords": [
@@ -9,13 +9,13 @@
         "omnipay",
         "pay",
         "payment",
-		"ideal"
+        "ideal"
     ],
-    "homepage": "https://github.com/nettob/omnipay-sisow",
+    "homepage": "https://github.com/martijnpieters/omnipay-sisow",
     "license": "MIT",
     "authors": [
         {
-            "name": "nettob"
+            "name": "martijnpieters"
         }
     ],
     "autoload": {

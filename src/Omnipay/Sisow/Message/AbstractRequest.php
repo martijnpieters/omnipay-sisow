@@ -57,7 +57,7 @@ abstract class AbstractRequest extends BaseAbstractRequest
         $data = array();
 
         if ($this->getTestMode()) {
-            $data['test'] = 'true';
+            $data['testmode'] = 'true';
         }
 
         return $data;
